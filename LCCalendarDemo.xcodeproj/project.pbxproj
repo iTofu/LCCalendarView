@@ -18,7 +18,6 @@
 		B387C9541C76CF34001D5BF7 /* LCCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B387C9531C76CF34001D5BF7 /* LCCalendarCell.m */; };
 		B387C9571C76CFB0001D5BF7 /* LCWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B387C9561C76CFB0001D5BF7 /* LCWeekdayView.m */; };
 		B387C95A1C76CFCD001D5BF7 /* LCCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B387C9591C76CFCD001D5BF7 /* LCCalendarView.m */; };
-		B39DDD2D1C76FBDE00AA0B0D /* LCCalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39DDD2C1C76FBDE00AA0B0D /* LCCalendarCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		B387C9561C76CFB0001D5BF7 /* LCWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCWeekdayView.m; sourceTree = "<group>"; };
 		B387C9581C76CFCD001D5BF7 /* LCCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCalendarView.h; sourceTree = "<group>"; };
 		B387C9591C76CFCD001D5BF7 /* LCCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCalendarView.m; sourceTree = "<group>"; };
-		B39DDD2C1C76FBDE00AA0B0D /* LCCalendarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCCalendarCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +155,6 @@
 			children = (
 				B387C9581C76CFCD001D5BF7 /* LCCalendarView.h */,
 				B387C9591C76CFCD001D5BF7 /* LCCalendarView.m */,
-				B39DDD2C1C76FBDE00AA0B0D /* LCCalendarCell.xib */,
 				B387C9521C76CF34001D5BF7 /* LCCalendarCell.h */,
 				B387C9531C76CF34001D5BF7 /* LCCalendarCell.m */,
 				B387C9551C76CFB0001D5BF7 /* LCWeekdayView.h */,
@@ -269,7 +266,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39DDD2D1C76FBDE00AA0B0D /* LCCalendarCell.xib in Resources */,
 				B387C92B1C76CE5F001D5BF7 /* LaunchScreen.storyboard in Resources */,
 				B387C9281C76CE5F001D5BF7 /* Assets.xcassets in Resources */,
 				B387C9261C76CE5F001D5BF7 /* Main.storyboard in Resources */,
