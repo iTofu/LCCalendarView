@@ -57,7 +57,7 @@ static NSString *CellID = @"me.leodev.LCCalendarCell";
         flowLayout.itemSize = CGSizeMake(cellR, cellR);
         flowLayout.sectionInset = UIEdgeInsetsMake(CellSpace * 0.5f, CellSpace * 0.5f, CellSpace * 0.5f, CellSpace * 0.5f);
         flowLayout.minimumInteritemSpacing = CellSpace;
-        flowLayout.minimumLineSpacing = CellSpace;
+        flowLayout.minimumLineSpacing = CellSpace * 2;
         
         CGRect collectionViewFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300);
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionViewFrame collectionViewLayout:flowLayout];
