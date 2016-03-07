@@ -46,7 +46,7 @@ static NSString *CellID = @"me.leodev.LCCalendarCell";
             weekdayLabel.font = [UIFont systemFontOfSize:14.0f];
             weekdayLabel.text = WEEKDAY_TITLES[i];
             weekdayLabel.textAlignment = NSTextAlignmentCenter;
-            weekdayLabel.textColor = [UIColor colorWithRed:73/255.0f green:183/255.0f blue:252/255.0f alpha:1.0f];
+            weekdayLabel.textColor = [UIColor colorWithRed:57/255.0f green:183/255.0f blue:251/255.0f alpha:1.0f];
             weekdayLabel.tag = i + 100;
             [weekdayView addSubview:weekdayLabel];
         }
