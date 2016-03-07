@@ -12,6 +12,7 @@ typedef enum : NSUInteger {
     LCCalendarCellTypeNormal,
     LCCalendarCellTypeRed,
     LCCalendarCellTypeGreen,
+    LCCalendarCellTypeBlue,
 } LCCalendarCellType;
 
 @interface LCCalendarCell : UICollectionViewCell

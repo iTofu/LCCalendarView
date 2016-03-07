@@ -60,12 +60,20 @@
         self.redBgView.hidden = NO;
         self.dayLabel.textColor = [UIColor whiteColor];
         self.statusLabel.textColor = [UIColor whiteColor];
+        
+        self.redBgView.image = [UIImage imageNamed:@"CellRedBg"];
     } else if (type == LCCalendarCellTypeGreen) {
         self.redBgView.hidden = NO;
         self.dayLabel.textColor = [UIColor whiteColor];
         self.statusLabel.textColor = [UIColor whiteColor];
         
         self.redBgView.image = [UIImage imageNamed:@"CellGreenBg"];
+    } else if (type == LCCalendarCellTypeBlue) {
+        self.redBgView.hidden = NO;
+        self.dayLabel.textColor = [UIColor whiteColor];
+        self.statusLabel.textColor = [UIColor whiteColor];
+        
+        self.redBgView.image = [UIImage imageNamed:@"CellBlueBg"];
     }
 }
 
