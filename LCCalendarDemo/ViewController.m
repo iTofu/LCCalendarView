@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     LCCalendarView *calendarView = [[LCCalendarView alloc] init];
-    calendarView.dateStringYM = @"201602";
+    calendarView.dateStringYM = @"201603";
     calendarView.delegate = self;
     calendarView.frame = CGRectMake(0, 64.0f, [UIScreen mainScreen].bounds.size.width, 300.0f);
     [self.view addSubview:calendarView];

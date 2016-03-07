@@ -53,17 +53,18 @@ static NSString *CellID = @"me.leodev.LCCalendarCell";
         
         // collection view
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        CGFloat cellR = [UIScreen mainScreen].bounds.size.width / 7 - CellSpace;
+        CGFloat cellR = ([UIScreen mainScreen].bounds.size.width - CellSpace * 8) / 7;
         flowLayout.itemSize = CGSizeMake(cellR, cellR);
         flowLayout.sectionInset = UIEdgeInsetsMake(CellSpace * 0.5f, CellSpace * 0.5f, CellSpace * 0.5f, CellSpace * 0.5f);
         flowLayout.minimumInteritemSpacing = CellSpace;
         flowLayout.minimumLineSpacing = CellSpace * 2;
         
-        CGRect collectionViewFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 300);
+        CGRect collectionViewFrame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width);
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:collectionViewFrame collectionViewLayout:flowLayout];
         collectionView.backgroundColor = [UIColor whiteColor];
         collectionView.dataSource = self;
         collectionView.delegate = self;
+        collectionView.scrollEnabled = NO;
         [self addSubview:collectionView];
         self.collectionView = collectionView;
         
@@ -86,7 +87,7 @@ static NSString *CellID = @"me.leodev.LCCalendarCell";
         weekdayLabel.frame = CGRectMake(x, 0, w, h);
     }
     
-    self.collectionView.frame = CGRectMake(0, CGRectGetMaxY(self.weekdayView.frame), self.frame.size.width, 300);
+    self.collectionView.frame = CGRectMake(0, CGRectGetMaxY(self.weekdayView.frame), self.frame.size.width, [UIScreen mainScreen].bounds.size.width);
 }
 
 - (void)setDateStringYM:(NSString *)dateStringYM {
@@ -122,6 +123,7 @@ static NSString *CellID = @"me.leodev.LCCalendarCell";
     LCCalendarCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellID forIndexPath:indexPath];
     
     if (indexPath.row >= self.whiteCellCount) {
+        cell.hidden = NO;
         cell.dayLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row - self.whiteCellCount + 1];
         cell.statusLabel.text = @"正常";
         
@@ -133,6 +135,8 @@ static NSString *CellID = @"me.leodev.LCCalendarCell";
         } else {
             cell.type = LCCalendarCellTypeNormal;
         }
+    } else {
+        cell.hidden = YES;
     }
     
     return cell;
